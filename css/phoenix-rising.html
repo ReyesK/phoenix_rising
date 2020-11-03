@@ -4,24 +4,12 @@
 
 <!-- custom styling -->
 <style>
-  /* apply font to body */
-  body {
-    font-family: Marck Script, serif;
-  }
-
-  /* other places that need to have font set */
-  h1, h2, h3, h4, h5, label {
-    font-family: Marck Script, serif;
-  }
-
-  .block-header__title {
-    font-family: Marck Script, serif;
-  }
-
-  .topic__bio > .author {
-    font-family: Marck Script, serif;
-  }
-
+  /* apply font  */
+  body,
+  h1, h2, h3, h4, h5, label,
+  .block-header__title,
+  .form-control.bio,
+  .topic__bio > .author,
   .standard-layout .form-wrapper .form-content .form-section__header a.block-toggle {
     font-family: Marck Script, serif;
   }
@@ -39,6 +27,12 @@
   }
 
   /* make sidebar more visible */
+  .form-content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+  }
+
   .sidebar__members,
   .sidebar--left > .sidebar__content {
     background-color: #f7f9fb;
