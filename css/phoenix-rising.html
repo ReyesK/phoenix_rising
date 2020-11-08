@@ -7,6 +7,8 @@
   /* apply font  */
   body,
   h1, h2, h3, h4, h5, label,
+  b, strong,
+  .trix-v1 .trix-content strong,
   .block-header__title,
   .form-control.bio,
   .topic__bio > .author,
@@ -24,6 +26,11 @@
   /* set header color */
   #mainHeader {
     background-color: black;
+    z-index: 1;
+  }
+
+  .header__breadcrumb {
+    color: white;
   }
 
   /* make sidebar more visible */
@@ -33,16 +40,9 @@
     border-radius: 4px;
   }
 
-  .sidebar__members,
-  .sidebar--left > .sidebar__content {
-    background-color: #f7f9fb;
-    margin-top: 20px;
-    border-radius: 4px;
+  /* let js decide what sidebar is shown */
+  .sidebar__content {
+    display: none;
   }
-
-  .sidebar__members {
-    padding: 10px 20px 10px 20px;
-  }
-
 
 </style>
