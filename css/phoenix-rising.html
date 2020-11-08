@@ -26,10 +26,15 @@
   /* set header color */
   #mainHeader {
     background-color: black;
+  }
+
+  /* main header goes over some pop up content, this fixes that */
+  .standard-layout .main__header.header--sticky, .standard-layout .main__header.header--stuck {
     z-index: 1;
   }
 
-  .header__breadcrumb {
+  /* make breadcrumbs easier to see */
+  .header__breadcrumb a {
     color: white;
   }
 
@@ -42,7 +47,7 @@
 
   /* let js decide what sidebar is shown */
   .sidebar__content {
-    display: none;
+    visibility: hidden;
   }
 
 </style>

@@ -6,14 +6,13 @@
     script.onload = function() { // do jquery stuff here
         var $ = window.jQuery;
 
-
         $(document).ready(function(){
           $('.sidebar__content').height(window.innerHeight - 140);
 
           if ($('.sidebar--right > .sidebar__content').children().length === 0) {
-            $('.sidebar--left > .sidebar__content').show();
+            $('.sidebar--left > .sidebar__content').css('visibility', 'visible');
           } else {
-            $('.sidebar__content').show();
+            $('.sidebar__content').css('visibility', 'visible');
           }
 
           $('.sidebar__content').css({
