@@ -21,7 +21,9 @@ VIP users that cancel will need to cancel both regular and VIP subscriptions, th
 All these workarounds could have been avoided if Zapier had an update subscription action for stripe.
 
 It needs to be clear to the user ANY comment on the upgrade topic will start a monthly subscription, to help with that I wrote some javascript to remove the reply button from that topic's comments.
-made it so you cannot reply to comments on the upgrade topic
+made it so you cannot reply to comments on the upgrade topic.
+
+Currently there is also nothing stopping a user from commenting many times on that topic, they will get a new 20$ monthly subscription for each comment.
 
 
 TODO:
