@@ -7,6 +7,8 @@
         var $ = window.jQuery;
 
         $(document).ready(function(){
+          $(".topic__comments[data-topic-id='174059']").find(".topic__actions--reply").hide(); // hide reply button on upgrade topic 
+
           $('.sidebar__content').height(window.innerHeight - 140);
 
           if ($('.sidebar--right > .sidebar__content').children().length === 0) {
