@@ -1,18 +1,17 @@
 onboarding:
-Invitation Link > Members join > stripe sends invoice for subscription
-
-Coupon for users that join on or before December 31st, reduced cost forever, 5$ off (actually expires Jan 1st 2021)
+send user to sarahspeaksup.com/phoenix-rising > user fills out a stripe hosted payment page > on new customer trigger (successful payment) > invite member to circle (they would get an email)
 
 canceled subscription:
 removes user from circle
 
 VIP upgrade:
-Circle new comment posted in specific space on a specific topic  > update subscription in stripe > give user vip tag & access to spaces
+user clicks button on topic in circle > user fills out stripe hosted payment page > new customer triggers in stripe > tag member in circle > add member to space group
 
+Important notes:
 Zapier does not support updating subscriptions with stripe, so there are a few workarounds.
 
-VIP subscription in stripe is an additional subscription for 20$, the user will have both the basic subscription and the vip, for a total of 30$
-early access users will still get 5$ off the base subscription making a vip total 25$
+VIP subscription in stripe is an additional subscription for $19.99 +tax, the user will have both the basic subscription and the vip, for a total of $29.99(+tax)
+early access users will still get 5$ off the base subscription making a vip total $24.99(+tax)
 
 The caveat is there is no way to downgrade besides canceling the subscription, which removes them from the circle.
 
@@ -20,17 +19,9 @@ VIP users that cancel will need to cancel both regular and VIP subscriptions, th
 
 All these workarounds could have been avoided if Zapier had an update subscription action for stripe.
 
-It needs to be clear to the user ANY comment on the upgrade topic will start a monthly subscription, to help with that I wrote some javascript to remove the reply button from that topic's comments.
-made it so you cannot reply to comments on the upgrade topic.
-
-Currently there is also nothing stopping a user from commenting many times on that topic, they will get a new 20$ monthly subscription for each comment.
-
-
 TODO:
 
 downgrade from vip:
 there is no downgrade zapier doesnt have update subscription
 
-Tax?
-
-Images are not hosted by us, can disappear anytime (although unlikely)
+make the elevated stripe button success a page within the elevated circle group, cancel can be the upgrade topic 

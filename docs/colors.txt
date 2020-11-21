@@ -1,0 +1,11 @@
+turquoise - #4EC5CF
+
+secondary - #FFB376
+
+
+
+Dark blue - #134E5D
+Pale pink - #F2DBCE
+Yellow - #D9B23D
+Red - #AB4029
+Dark Yellow - #BF9649

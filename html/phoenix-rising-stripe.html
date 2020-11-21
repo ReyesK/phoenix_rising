@@ -1,0 +1,93 @@
+<html>
+  <style>
+    #wrap_all {
+      background-image: linear-gradient(#134E5D, #F2DBCE, #D9B23D, #AB4029, #BF9649);
+      background-attachment: fixed;
+    }
+
+    #main, .container_wrap {
+      background-color: transparent;
+    }
+
+    .container_wrap {
+      border: none !important;
+    }
+
+    .pr-content {
+      background-color: white;
+      width: 75%;
+      margin: auto;
+      padding: 20px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 800px) {
+      .pr-content{
+        width: 85%;
+      }
+    }
+
+    @media only screen and (max-width: 610px) {
+      .pr-content{
+        width: 95%;
+      }
+    }
+
+  </style>
+  <body>
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <div id="error-message"></div>
+    <div>
+      <div class="pr-content">
+        <h1> Phoenix Rising </h1>
+
+        <p>Sarah Gallardo has been guiding us through survivorship during our darkest hours. You've heard her <b>incredible words</b>, <b>inspiring stories</b>, and seen her <b>life changing imagery</b>. Now we are pleased to have you join us in our private online community, Phoenix Rising. Rise from your own ashes as the legend that you are and change your life. </p>
+
+        <p>You will have access to premium content, inclusive support groups moderated by field professionals, and daily innovation as a part of the Phoenix family. From now until December 31st, we invite you to join for the remarkable price of $5 (+ CT sales tax) per month.</p>
+        <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+        <button
+          style="background-color:#F68200;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+          id="checkout-button-price_1HnunpKl2A2CzdihcuZm6sgG"
+          role="link"
+          type="button"
+        >
+          Subscribe to ignite the fire within!
+        </button>
+
+      </div>
+    </div>
+    <script>
+    (function() {
+      var stripe = Stripe('pk_live_51HiRw1Kl2A2Czdiha1vwVUeOm7ToNWkCjbdvCVzgmMqkcOrsIF4CTO3a2EixGYNUkyzvWMny545lJQMP0fbzIeQT0074F4wQkn');
+
+      var checkoutButton = document.getElementById('checkout-button-price_1HnunpKl2A2CzdihcuZm6sgG');
+      checkoutButton.addEventListener('click', function () {
+        // When the customer clicks on the button, redirect
+        // them to Checkout.
+        stripe.redirectToCheckout({
+          lineItems: [{price: 'price_1HnunpKl2A2CzdihcuZm6sgG', quantity: 1}],
+          mode: 'subscription',
+          // Do not rely on the redirect to the successUrl for fulfilling
+          // purchases, customers may not always reach the success_url after
+          // a successful payment.
+          // Instead use one of the strategies described in
+          // https://stripe.com/docs/payments/checkout/fulfill-orders
+          successUrl: window.location.protocol + '//sarahspeaksup.com/phoenix-rising-success',
+          cancelUrl: window.location.protocol + '//sarahspeaksup.com/phoenix-rising',
+        })
+        .then(function (result) {
+          if (result.error) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer.
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
+          }
+        });
+      });
+    })();
+    </script>
+  </body>
+</html>

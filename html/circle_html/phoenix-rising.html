@@ -1,10 +1,11 @@
-<!-- load font -->
+<!-- load font
 <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Marck+Script">
+-->
 
 <!-- custom styling -->
 <style>
-  /* apply font  */
+  /* apply font (currently disabled)
   body,
   h1, h2, h3, h4, h5, label,
   b, strong,
@@ -16,16 +17,18 @@
     font-family: Marck Script, serif;
   }
 
+  */
+
   /* set a background image for the main content */
+
   #panel {
-    background-image: url("https://www.gannett-cdn.com/-mm-/1f66555fb4d7f329693b5f08f4e67628057c309f/c=0-26-2118-1223/local/-/media/2016/09/30/CNYGroup/Ithaca/636108516648281927-ThinkstockPhotos-113494458.jpg");
-    background-position: center;
+    background-image: linear-gradient(#134E5D, #F2DBCE, #D9B23D, #AB4029, #BF9649);
     background-attachment: fixed;
   }
 
   /* set header color */
   #mainHeader {
-    background-color: black;
+    background-color: #134E5D;
   }
 
   /* main header goes over some pop up content, this fixes that */
@@ -33,8 +36,7 @@
     z-index: 1;
   }
 
-  /* make breadcrumbs easier to see */
-  .header__breadcrumb a {
+  .header__breadcrumb a{
     color: white;
   }
 
@@ -52,6 +54,11 @@
   /* let js decide what sidebar is shown */
   .sidebar__content {
     visibility: hidden;
+  }
+
+  /* make the header icon rounded */
+  .community__logo > img {
+    border-radius: 50%;
   }
 
 </style>
